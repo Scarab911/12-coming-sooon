@@ -14,3 +14,11 @@
 @import './components/progress-bar.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
+
+.bg-primary{
+    background-color: var(--color-primary);
+}
+
+.bg-secondary{
+    background-color: var(--color-secondary);
+}
