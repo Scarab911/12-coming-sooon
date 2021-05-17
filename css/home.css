@@ -22,3 +22,9 @@
 .bg-secondary{
     background-color: var(--color-secondary);
 }
+.container.hero {
+    padding-bottom: 25px;
+}
+footer.container {
+    padding-top: 0;
+}
