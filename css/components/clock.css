@@ -1,0 +1,18 @@
+.clock{
+    display: flex;
+    width: 100%;
+    color: var(--color-light);
+    font-size: 16px;
+    text-transform: uppercase;
+    
+}
+.clock > .time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.clock > .time > .value{
+    font-size: 70px;
+    font-weight: bold;
+}
