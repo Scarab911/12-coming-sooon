@@ -4,7 +4,7 @@
 @import './base/variables.css';
 
 /* 3rd party */
-
+@import './3-rd-party/font-awesome.min.css';
 
 /* components*/
 @import './components/button.css';
@@ -74,4 +74,8 @@ footer.container {
 /*FOOTER CONTAINER*/
 footer.container{
 padding-top: 0;
+}
+
+.socials {
+    
 }
