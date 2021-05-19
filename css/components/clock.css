@@ -11,7 +11,7 @@
 .clock > .time{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     width: 25%;
 }
 .clock > .time > .value{
