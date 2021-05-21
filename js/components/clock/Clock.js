@@ -14,6 +14,7 @@ class Clock {
         }
 
         this.render();
+        this.updateClock();
     }
 
     isValidSelector() {
@@ -80,6 +81,15 @@ class Clock {
         return [dienos, valandos, minutes, likusiosSekundes];
     }
 
+    updateClock() {
+        setInterval(() => {
+            const timeValues = this.formatTime(this.calcDeadline());
+            for (let i = 0; i < 4; i++) {
+               this.allValuesDOM[i] .innerText = timeValues[i];
+                
+            }
+        }, 1000)
+    }
     render() {
         const timeValues = this.formatTime(this.calcDeadline());
         const labelValues = ['Days', 'Hours', 'Minutes', 'Seconds'];
@@ -93,6 +103,7 @@ class Clock {
         }
 
         this.DOM.innerHTML = HTML;
+        this.allValuesDOM = this.DOM.querySelectorAll('.value');
     }
 }
 
