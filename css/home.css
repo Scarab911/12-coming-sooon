@@ -15,87 +15,149 @@
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
 
-.bg-primary{
-    background-color: var(--color-primary);
+.bg-primary {
+  background-color: var(--color-primary);
 }
 
-.bg-secondary{
-    background-color: var(--color-secondary);
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
 .container.hero {
-    padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 footer.container {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 /* HERO SECTION */
-.container.hero{
-    padding-bottom: 25px;
-    background-image: url("../img/hero-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
+.container.hero {
+  padding-bottom: 25px;
+  background-image: url('../img/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
-.hero>.row-small{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
+.hero > .row-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
-.logo{
-    height: 40px;
-    width: 200px;
-    object-fit: contain;
-    object-position: center;
+.logo {
+  height: 40px;
+  width: 200px;
+  object-fit: contain;
+  object-position: center;
 }
 .main-title {
-    font-size: 70px;
-    text-transform: uppercase;
-    font-weight: bold;
-    
-    color: var(--color-dark);
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-dark);
 }
-.main-description{
-    font-size: 20px;
-    color: var(--color-grey);
-    
+.main-description {
+  font-size: 20px;
+  color: var(--color-grey);
 }
 
-@media (max-width: 280px){
-    .main-title {
-        font-size: 50px;
-        padding: 0 20px;
-    }
+@media (max-width: 280px) {
+  .main-title {
+    font-size: 50px;
+    padding: 0 20px;
+  }
+}
+/*MAIN CONTAINER*/
+main > .row-big > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-title {
+  text-transform: uppercase;
+  line-height: 24px;
+  font-weight: bold;
+}
+.description-section {
+  color: var(--color-grey);
+  font-size: 18px;
+  line-height: 20px;
+}
+.description-section > a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+.progres-bar {
+  padding: 5px;
+  color: var(--color-grey);
+}
+.progres-bar > div {
+  line-height: 24px;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--color-grey);
+}
 /*FOOTER CONTAINER*/
-footer.container{
-padding-top: 0;
+footer.container {
+  padding-top: 0;
 }
 
 .socials {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 15px;
-    border-bottom: 1px solid var(--color-light);  
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-bottom: 1px solid var(--color-light);
 }
 .socials > .fa {
-    color: var(--color-light);
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    line-height: 40px;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 50%;
-    transition: all 0.5s;
+  color: var(--color-light);
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.5s;
 }
 .socials > .fa:hover {
-    background-color: var(--color-light);
-    color: var(--color-primary);
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+footer > .row-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff8;
+}
+footer > .row-small a {
+  text-decoration: none;
+  color: #fff;
+}
+.row-small > img {
+  width: 200px;
+}
+.row-small > .bottom-links {
+  display: flex;
+  gap: 10px;
+  text-transform: capitalize;
+}
+.rights {
+  border-left: solid 2px;
+  border-right: solid 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.row-small > .bottom-description {
+  text-align: center;
 }
