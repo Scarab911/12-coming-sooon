@@ -152,11 +152,24 @@ footer > .row-small a {
   gap: 10px;
   text-transform: capitalize;
 }
+@media (max-width: 640px) {
+  .row-small > .bottom-links {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .rights {
   border-left: solid 2px;
   border-right: solid 2px;
   padding-left: 10px;
   padding-right: 10px;
+}
+@media (max-width: 640px) {
+  .rights {
+    border: none;
+  }
 }
 .row-small > .bottom-description {
   text-align: center;
