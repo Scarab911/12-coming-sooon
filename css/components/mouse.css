@@ -1,0 +1,26 @@
+.mouse {
+  width: 25px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  position: relative;
+}
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  animation: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+  }
+  100% {
+    margin-top: 35px;
+    background-color: #fff3;
+  }
+}
