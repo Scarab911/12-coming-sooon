@@ -16,3 +16,13 @@ form .message {
   width: 100%;
   line-height: 95px;
 }
+.subscribe-form > input {
+  display: inline-block;
+  width: 535px;
+  border-bottom: solid #fff8 2px;
+  background-color: rgba(255, 0, 0, 0);
+}
+.subscribe-form > input::placeholder {
+  color: #fff8;
+  font-style: italic;
+}

@@ -1,4 +1,4 @@
-.right-column button {
+button {
   margin: auto;
   width: 135px;
   padding: 5px;
@@ -6,8 +6,15 @@
   font-size: 18px;
   background-color: var(--color-secondary);
   color: #fff;
+  text-transform: capitalize;
+  border: none;
 }
 .message-button {
   display: inline-block;
   float: right;
+}
+.subscribe-button {
+  width: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
