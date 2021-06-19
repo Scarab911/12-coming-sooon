@@ -1,0 +1,18 @@
+form > div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+form label {
+  color: var(--color-grey);
+}
+form input {
+  font-size: 18px;
+  line-height: 40px;
+  border: none;
+  border-bottom: solid var(--color-grey) 1px;
+}
+form .message {
+  width: 100%;
+  line-height: 95px;
+}
