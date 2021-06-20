@@ -9,9 +9,12 @@ button {
   text-transform: capitalize;
   border: none;
 }
+.msgb {
+  position: relative;
+}
 .message-button {
-  display: inline-block;
-  float: right;
+  right: 0;
+  position: absolute;
 }
 .subscribe-button {
   width: auto;

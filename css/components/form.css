@@ -26,3 +26,8 @@ form .message {
   color: #fff8;
   font-style: italic;
 }
+@media (max-width: 640px) {
+  form {
+    width: 100%;
+  }
+}

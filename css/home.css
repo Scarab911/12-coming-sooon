@@ -57,6 +57,11 @@ footer.container {
   font-weight: bold;
   color: var(--color-dark);
 }
+@media (max-width: 640px) {
+  .main-title {
+    line-height: 80px;
+  }
+}
 .main-description {
   font-size: 20px;
   color: var(--color-grey);
@@ -102,10 +107,6 @@ form {
   gap: 10px;
 }
 /*FOOTER CONTAINER*/
-footer.container {
-  padding-top: 0;
-}
-
 .socials {
   display: flex;
   gap: 10px;
@@ -136,6 +137,9 @@ footer.container {
   font-size: 18px;
   line-height: 30px;
   color: #fff8;
+}
+footer.row-small {
+  position: relative;
 }
 footer a {
   text-decoration: none;
@@ -181,4 +185,30 @@ footer a {
 }
 .bottom-description {
   text-align: center;
+}
+
+.back-to-top {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -125px;
+  right: 0px;
+  transform: rotate(90deg);
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 460px) {
+  .back-to-top {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
