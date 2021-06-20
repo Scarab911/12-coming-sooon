@@ -200,9 +200,15 @@ footer a {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
 }
 @media (max-width: 460px) {
   .back-to-top {
     display: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
