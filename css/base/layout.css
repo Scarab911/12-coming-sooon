@@ -3,6 +3,9 @@
   width: 100%;
   padding: 60px 0;
 }
+main.container {
+  margin-bottom: 50px;
+}
 
 .row-small {
   display: inline-block;
@@ -23,6 +26,7 @@
   display: inline-block;
   width: 40%;
   float: right;
+  position: relative;
 }
 
 @media (max-width: 1100px) {
