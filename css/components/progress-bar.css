@@ -27,10 +27,46 @@
 }
 .uxdesign .linebar {
   width: 90%;
+  animation: uxprogress;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+@keyframes uxprogress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
 }
 .webdesing .linebar {
   width: 86%;
+  animation: wdprogress;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+@keyframes wdprogress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 86%;
+  }
 }
 .webdev .linebar {
   width: 86%;
+  animation: webdprogress;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+@keyframes webdprogress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 86%;
+  }
 }
