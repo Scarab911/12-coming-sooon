@@ -7,10 +7,11 @@
 }
 .dot {
   width: 5px;
-  height: 5px;
+  height: 8px;
+  border-radius: 2px;
   background-color: #fff;
   position: absolute;
-  left: 9px;
+  left: calc(50% - 2.5px);
   top: 5px;
   animation: scroll;
   animation-duration: 2s;
@@ -18,9 +19,13 @@
 }
 @keyframes scroll {
   0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
   }
   100% {
     margin-top: 35px;
-    background-color: #fff3;
+    opacity: 0;
   }
 }

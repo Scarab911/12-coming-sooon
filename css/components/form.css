@@ -1,24 +1,28 @@
-form > div {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-}
-form label {
-  color: var(--color-grey);
+form {
+  display: inline-block;
+  width: 100%;
 }
 form input {
   font-size: 18px;
   line-height: 40px;
+  width: 48%;
   border: none;
   border-bottom: solid var(--color-grey) 1px;
 }
+form > .email {
+  margin-left: 12px;
+}
 form .message {
+  margin-top: 10px;
   width: 100%;
-  line-height: 95px;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  border-bottom: solid var(--color-grey) 0.5px;
 }
 .subscribe-form > input {
   display: inline-block;
-  width: 535px;
+  width: 90%;
   border-bottom: solid #fff8 2px;
   background-color: rgba(255, 0, 0, 0);
 }

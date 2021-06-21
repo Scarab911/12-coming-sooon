@@ -1,6 +1,5 @@
 button {
   margin: auto;
-  width: 135px;
   padding: 5px;
   line-height: 30px;
   font-size: 18px;
@@ -9,12 +8,13 @@ button {
   text-transform: capitalize;
   border: none;
 }
-.msgb {
-  position: relative;
-}
+
 .message-button {
-  right: 0;
-  position: absolute;
+  display: inline-block;
+  float: right;
+  margin-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .subscribe-button {
   width: auto;

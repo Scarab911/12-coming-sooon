@@ -100,12 +100,6 @@ main > .row-big > div {
 .progres-bar > div {
   line-height: 24px;
 }
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
 /*FOOTER CONTAINER*/
 .socials {
   display: flex;
