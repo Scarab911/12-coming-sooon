@@ -7,6 +7,11 @@ button {
   color: #fff;
   text-transform: capitalize;
   border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0001;
+}
+button:hover {
+  box-shadow: 0 2px 8px #0004;
 }
 
 .message-button {
