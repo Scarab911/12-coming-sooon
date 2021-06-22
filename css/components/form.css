@@ -13,6 +13,11 @@ form textarea {
   border: none;
   border-bottom: solid #ccc 1px;
 }
+form > textarea {
+  resize: vertical;
+  min-height: 68px;
+  max-height: 96px;
+}
 @media (min-width: 1100px) {
   form input {
     width: 45%;
