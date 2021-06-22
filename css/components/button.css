@@ -9,6 +9,8 @@ button {
   border: none;
   cursor: pointer;
   box-shadow: 0 2px 8px #0001;
+  transition: all 0.5s;
+  border-radius: 3px;
 }
 button:hover {
   box-shadow: 0 2px 8px #0004;
