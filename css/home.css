@@ -190,7 +190,7 @@ footer a {
   right: -20px;
   transform: rotate(90deg);
 }
-@media (max-width: 460px) {
+@media (max-width: 680px) {
   .back-to-top {
     display: none;
   }
