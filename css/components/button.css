@@ -23,6 +23,17 @@ button:hover {
   padding-left: 25px;
   padding-right: 25px;
 }
+.btn-round {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 .subscribe-button {
   width: auto;
   padding-left: 30px;
