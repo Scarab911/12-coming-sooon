@@ -5,7 +5,6 @@
 }
 .progress-bar > div {
   display: flex;
-  flex-direction: column;
   line-height: 30px;
 }
 .progess-text {
@@ -22,15 +21,6 @@
 .linebar {
   display: inline-block;
   height: 5px;
-}
-.uxdesign .linebar {
-  width: 90%;
-}
-.webdesing .linebar {
-  width: 86%;
-}
-.webdev .linebar {
-  width: 36%;
 }
 .progress-bar .animatedbar {
   display: inline-block;
