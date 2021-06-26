@@ -58,6 +58,25 @@ class Form {
 
         return count;
     }
+    isValidName(firstName) {
+        if (firstName === undefined ||
+            typeof firstName !== 'string' ||
+            firstName.length < 2 ||
+            !this.isUpperCase(firstName[0])) {
+            return false;
+        }
+        return true;
+    }
+    isUpperCase(letter) {
+        return letter === letter.toUpperCase();
+    }
+    isValidMessage(msg) {
+        if (typeof msg !== 'string' ||
+            msg === '') {
+            return false;
+        }
+        return true;
+    }
     addEvents() {
         this.submitButtonDOM.addEventListener('click', (e) => {
             e.preventDefault();
@@ -67,6 +86,18 @@ class Form {
 
                 if (validationRule === 'email') {
                     if (this.isValidEmail(element.value) === false) {
+                        allGood = false;
+                        break;
+                    }
+                }
+                if (validationRule === 'name') {
+                    if (this.isValidName(element.value) === false) {
+                        allGood = false;
+                        break;
+                    }
+                }
+                if (validationRule === 'text') {
+                    if (this.isValidMessage(element.value) === false) {
                         allGood = false;
                         break;
                     }
