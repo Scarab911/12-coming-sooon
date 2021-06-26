@@ -6,6 +6,13 @@ class Form {
         this.allInputsDOM = [];
         this.submitButtonDOM = null;
 
+        this.validations = {
+            email: this.isValidEmail,
+            name: this.isValidName,
+            text: this.isValidText,
+        };
+
+
 
         this.init()
     }
@@ -13,17 +20,13 @@ class Form {
         if (!this.isValidSelector()) {
             return false;
         }
-
-        //uzregistruojae mygtuko paspaudimo ivyki
-
         this.DOM = document.querySelector(this.selector)
         if (!this.DOM) {
             console.error('ERROR: Element not found!');
             return false
         }
         this.allInputsDOM = this.DOM.querySelectorAll('input, textarea')
-        this.submitButtonDOM = this.DOM.querySelector('button')
-
+        this.submitButtonDOM = this.DOM.querySelector('button[type="submit"]')
 
         this.addEvents()
     }
@@ -58,11 +61,11 @@ class Form {
 
         return count;
     }
-    isValidName(firstName) {
-        if (firstName === undefined ||
-            typeof firstName !== 'string' ||
-            firstName.length < 2 ||
-            !this.isUpperCase(firstName[0])) {
+    isValidName(name) {
+        if (name === undefined ||
+            typeof name !== 'string' ||
+            name.length < 2 ||
+            !this.isUpperCase(name[0])) {
             return false;
         }
         return true;
@@ -70,9 +73,9 @@ class Form {
     isUpperCase(letter) {
         return letter === letter.toUpperCase();
     }
-    isValidMessage(msg) {
-        if (typeof msg !== 'string' ||
-            msg === '') {
+    isValidText(text) {
+        if (typeof text !== 'string' ||
+            text === '') {
             return false;
         }
         return true;
@@ -83,34 +86,30 @@ class Form {
             let allGood = true;
             for (let element of this.allInputsDOM) {
                 const validationRule = element.dataset.validation;
+                const value = element.value;
 
-                if (validationRule === 'email') {
-                    if (this.isValidEmail(element.value) === false) {
-                        allGood = false;
-                        break;
-                    }
+                if (validationRule === 'email' && !this.isValidEmail(value)) {
+                    allGood = false;
+                    console.error('ERROR: Bad email form');
+                    break;
                 }
-                if (validationRule === 'name') {
-                    if (this.isValidName(element.value) === false) {
-                        allGood = false;
-                        break;
-                    }
+                if (validationRule === 'name' && !this.isValidName(value)) {
+                    allGood = false;
+                    console.error('ERROR: Bad Name form');
+                    break;
                 }
-                if (validationRule === 'text') {
-                    if (this.isValidMessage(element.value) === false) {
-                        allGood = false;
-                        break;
-                    }
+                if (validationRule === 'text' && !this.isValidText(value)) {
+                    allGood = false;
+                    console.error('ERROR: message area has to be non empty');
+                    break;
+                }
+                if (allGood === true) {
+                    console.log('All Good')
                 }
             }
-            console.log('All Good?', allGood)
 
 
         });
-
-
-        //issitraukti is visu formos lauku informacija
-        //eiti per visus formos laukus ir atapzinus informacijos tipa atlikti tos informacijos validacija
 
         //jei patikrinus visus laukus nerasta klaidu tai 'siunciam pranesima'
         //jei patikrinus visus laukus rasta klaidu tai 'siunciam pranesimus' (kolkas i konsole)
