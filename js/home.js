@@ -12,7 +12,7 @@ import { Socials } from './components/socials/SocialsOOP.js'
 new Clock('#clock_1', clockData);
 // socials('footer .socials', socialsData); //old function execution
 new ProgressBar('.left-column', progressBarData);
-new Socials('.socials', socialsData); //OOP socials execution
+new Socials('footer .socials', socialsData); //OOP socials execution
 
 
 
