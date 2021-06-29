@@ -1,0 +1,59 @@
+.toast {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 20px;
+  color: #fff;
+  line-height: 28px;
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px #0005;
+}
+.toast.hide {
+  display: none;
+}
+.toast[data-state='success'] {
+  background-color: #1bc5bd;
+}
+.toast[data-state='info'] {
+  background-color: #8950fc;
+}
+.toast[data-state='warning'] {
+  background-color: #ffa800;
+}
+.toast[data-state='error'] {
+  background-color: #f64e60;
+}
+.toast > .fa {
+  display: none;
+  font-size: 32px;
+}
+.toast[data-state='success'] > .fa-check,
+.toast[data-state='info'] > .fa-info-circle,
+.toast[data-state='warning'] > .fa-exclamation-triangle,
+.toast[data-state='error'] > .fa-shield {
+  display: flex;
+  align-self: center;
+}
+.toast > .fa-times {
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+}
+.toast > .texts {
+  width: 100%;
+}
+.toast > .texts > .title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.toast > .texts > .message {
+  font-size: 0.9em;
+  line-height: 1.2em;
+}

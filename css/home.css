@@ -12,6 +12,7 @@
 @import './components/form.css';
 @import './components/mouse.css';
 @import './components/progress-bar.css';
+@import './components/toast.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
 html {

@@ -1,7 +1,7 @@
 class Form {
-    constructor(selector) {
+    constructor(selector, toastObject) {
         this.selector = selector;
-
+        this.toastObject = toastObject;
         this.DOM = null;
         this.allInputsDOM = [];
         this.submitButtonDOM = null;
@@ -11,9 +11,6 @@ class Form {
             name: this.isValidName,
             text: this.isValidText,
         };
-
-
-
         this.init()
     }
     init() {
@@ -40,12 +37,14 @@ class Form {
         return true
     }
     isValidEmail(email) {
+        const maxEmailLength = 100;
         if (typeof email !== 'string' ||
             email.length < 6 ||
             email.indexOf('@') === -1 || //reiskia @ stringe nerasta(-1)
             email[0] === '@' ||         // pirma string reiksme yra@
             email.slice(-4).indexOf('@') > -1 || //paima 4 paskutinius email simbolius ir iesko @
-            this.countSimbols(email, '@') > 1) { //tikrina kiek stringe yra atitinkamu simboliu!
+            this.countSimbols(email, '@') > 1 ||
+            email.length > maxEmailLength) { //tikrina kiek stringe yra atitinkamu simboliu!
             return false;
         }
         return true;
@@ -62,10 +61,12 @@ class Form {
         return count;
     }
     isValidName(name) {
+        const maxNameLength = 50;
         if (name === undefined ||
             typeof name !== 'string' ||
             name.length < 2 ||
-            !this.isUpperCase(name[0])) {
+            !this.isUpperCase(name[0]) ||
+            name.length > maxNameLength) {
             return false;
         }
         return true;
@@ -90,29 +91,26 @@ class Form {
 
                 if (validationRule === 'email' && !this.isValidEmail(value)) {
                     allGood = false;
-                    console.error('ERROR: Bad email form');
+                    this.toastObject.error('ERROR: Bad email form');
                     break;
                 }
                 if (validationRule === 'name' && !this.isValidName(value)) {
                     allGood = false;
-                    console.error('ERROR: Bad Name form');
+                    this.toastObject.error('ERROR: Bad Name form');
                     break;
                 }
                 if (validationRule === 'text' && !this.isValidText(value)) {
                     allGood = false;
-                    console.error('ERROR: message area has to be non empty');
+                    this.toastObject.error('ERROR: message area has to be non empty');
                     break;
                 }
-                if (allGood === true) {
-                    console.log('All Good')
-                }
+
             }
+            if (allGood) {
+                this.toastObject.success('Form sent successfully !')
 
-
+            }
         });
-
-        //jei patikrinus visus laukus nerasta klaidu tai 'siunciam pranesima'
-        //jei patikrinus visus laukus rasta klaidu tai 'siunciam pranesimus' (kolkas i konsole)
     }
 }
 export { Form }
