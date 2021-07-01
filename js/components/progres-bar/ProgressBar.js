@@ -3,6 +3,7 @@ class ProgressBar {
         this.selector = selector;
         this.data = data;
         this.DOM = null;
+        this.allProgressBar = null;
         this.init();
     }
     init() {
@@ -20,6 +21,7 @@ class ProgressBar {
         }
 
         this.render();
+        this.addEvents();
     }
     isValidSelector() {
         if (typeof this.selector !== 'string' ||
@@ -51,6 +53,37 @@ class ProgressBar {
                     </div>`
         }
         this.DOM.innerHTML += HTML;
+        this.allProgressBar = this.DOM.querySelectorAll('.progress-bar')
+        console.log(this.allProgressBar);
     }
+    addEvents() {
+
+        const screenBottom = window.scrollY + window.innerHeight;
+
+
+
+        window.addEventListener('scroll', () => {
+            for (let i = 0; i < this.allProgressBar.length; i++) {
+
+                const element = this.allProgressBar[i];
+                console.log(element);
+                const elementBottom = element.offsetHeight + element.offsetTop;
+
+                if (screenBottom >= elementBottom) {
+                    element.classList.add('loading');
+
+                }
+            }
+
+            // for (const element in this.allProgressBar) {
+            //     console.log(element);
+            //     const elementBottom = element.offsetHeight + element.offsetTop;
+            //     if (screenBottom >= elementBottom) {
+            //         element.classList.add('loading');
+            //         console.log('rodoma');
+            //     }
+            // }
+        });
+    };
 }
 export { ProgressBar };
