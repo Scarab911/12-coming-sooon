@@ -58,11 +58,11 @@ class ProgressBar {
     }
     addEvents() {
 
-        const screenBottom = window.scrollY + window.innerHeight;
 
 
 
         window.addEventListener('scroll', () => {
+            const screenBottom = window.scrollY + window.innerHeight;
             for (let i = 0; i < this.allProgressBar.length; i++) {
 
                 const element = this.allProgressBar[i];
